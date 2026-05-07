@@ -34,7 +34,7 @@ jobs:
           COMMIT_AUTHOR: ${{ github.actor }}
           COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
           COMMIT_URL: ${{ github.event.head_commit.url }}
-          COMMIT_COUNT: ${{ github.event.commits && github.event.commits.size || 1 }}
+          COMMIT_COUNT: 1
 
         run: |
           TIMESTAMP=$(date -u +"%H:%M UTC")
@@ -48,7 +48,7 @@ jobs:
               \"title\": \"${{ steps.color.outputs.title }}\",
               \"color\": ${{ steps.color.outputs.color }},
               \"thumbnail\": {
-                \"url\": \"YOUR_LOGO_URL\"
+                \"url\": \"https://cdn.discordapp.com/attachments/1502061515216523345/1502061770347384974/LogoOficial.png?ex=69fe5789&is=69fd0609&hm=3e92a9b03b9ead4cf88a210247891da3786ebad6e764144f19bf00f8917a8120&\"
               },
               \"fields\": [
                 {
