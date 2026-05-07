@@ -1,4 +1,3 @@
-```yml
 name: Discord Notifications
 
 on:
@@ -20,4 +19,3 @@ jobs:
             "content": "🚀 New push on `${{ github.ref_name }}` by **${{ github.actor }}** in **${{ github.repository }}**"
           }' \
           https://discord.com/api/webhooks/1501701753962369096/pXaf0LTFLcZ5TRp0TShJo4fC0NfN5KV9dgXMIBt0YWkefAKagYHQ3TN45eevPinPlnt3
-```
