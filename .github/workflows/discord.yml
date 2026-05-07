@@ -1,0 +1,23 @@
+```yml
+name: Discord Notifications
+
+on:
+  push:
+    branches:
+      - main
+      - development
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Discord Notification
+        run: |
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d '{
+            "content": "🚀 New push on `${{ github.ref_name }}` by **${{ github.actor }}** in **${{ github.repository }}**"
+          }' \
+          https://discord.com/api/webhooks/1501701753962369096/pXaf0LTFLcZ5TRp0TShJo4fC0NfN5KV9dgXMIBt0YWkefAKagYHQ3TN45eevPinPlnt3
+```
